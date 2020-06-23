@@ -57,11 +57,11 @@ if(!isset($_SESSION['username'])){
 //This part is for enumerating the database.
 //I would not do this until I finish the login page.
 
-printf("<br><strong>The following are the comments presented with the news</strong>");
+printf("<br><p><strong>The following are the comments presented with the news</strong></p>");
 
 printf("<br>");
 
-echo htmlentities("The news is:");
+echo htmlentities("<p>The news is:</p>");
 
 
 $news_id = $_GET['news_id'];
@@ -83,7 +83,7 @@ $stmt1->execute();
 //Not sure whether this would be OK
 $stmt1->fetch();
 
-printf("\t<br><strong>%s</strong> <br> %s\n",
+printf("\t<br><strong><h3>%s    </h3></strong> <br> <h3><p>%s</p></h3>\n",
 		htmlspecialchars($news_topic),
 		htmlspecialchars($news_content)
     );
@@ -108,7 +108,7 @@ $stmt->bind_result($comment_id, $user_id, $comment_content);
 
 $stmt->execute();
 
-printf("<br><strong>The following are the comments presented with the news</strong>");
+printf("<br><p><strong>The following are the comments presented with the news</p></strong>");
 
 printf("<br>");
 

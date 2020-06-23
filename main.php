@@ -74,7 +74,7 @@ while($stmt->fetch()){
 		htmlspecialchars($news_topic),
 		htmlspecialchars($news_content)
     );
-    printf("<br> news by UID %s<br/>",htmlspecialchars($news_user_id));
+    printf("<br><p> news by UID %s</p><br/>",htmlspecialchars($news_user_id));
     echo "<a href='news_comment.php?news_user_id=$news_user_id&news_id=$news_id'><input type='button'value='see the comments'></a>";
     echo "<a href='edit_news.php?news_user_id=$news_user_id&news_id=$news_id'><input type='button'value='edit this news'></a>";
     echo "<a href='delete_news.php?news_user_id=$news_user_id&news_id=$news_id'><input type='button'value='delete this news'></a>";

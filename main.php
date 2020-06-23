@@ -55,7 +55,7 @@ echo "</div></div></li>
 //I would not do this until I finish the login page.
 echo "<div class=col-lg-12 col-md-12 col-sm-12'>";
 echo "<div style ='border-radius: 12px' class='h jumbotron' >";
-printf("<br><strong>The following are the news present</strong>");
+printf("<br><strong><p>The following are the news present</p></strong>");
 
 require 'database.php';
 
@@ -70,7 +70,7 @@ $stmt->execute();
 $stmt->bind_result($news_id, $news_user_id, $news_topic, $news_content);
 
 while($stmt->fetch()){
-	printf("\t<br><strong>%s</strong> <h5> %s</h5>\n",
+	printf("\t<br><strong><h3>   %s </h3></strong> <h3><p> %s </p></h3>\n",
 		htmlspecialchars($news_topic),
 		htmlspecialchars($news_content)
     );

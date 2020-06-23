@@ -61,7 +61,7 @@ printf("<br><p><strong>The following are the comments presented with the news</s
 
 printf("<br>");
 
-echo htmlentities("<p>The news is:</p>");
+echo htmlentities("The news is:");
 
 
 $news_id = $_GET['news_id'];
